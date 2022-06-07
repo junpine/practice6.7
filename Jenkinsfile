@@ -2,25 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Hello') {
             steps {
-                echo 'Building..'
+                echo 'Time goes here'
             }
-        }
-        stage('Test') {
-            steps {
-                build 'SeleniumMaven'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-    post {
-        always {
-            echo "pipeline job done!!!"
         }
     }
 }
+
